@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Beerhall.Models;
-using Beerhall.Models.ManageViewModels;
+using Beerhall.Models.ViewModels.ManageViewModels;
 using Beerhall.Services;
+using Beerhall.Models.Domain;
 
 namespace Beerhall.Controllers
 {

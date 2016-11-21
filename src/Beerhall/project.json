@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-Beerhall-5560a25f-a16f-40ef-bad4-59749740753c",
 
   "dependencies": {
@@ -43,7 +43,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "Microsoft.AspNetCore.Session": "1.0.0"
   },
 
   "tools": {
