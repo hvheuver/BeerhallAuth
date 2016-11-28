@@ -34,6 +34,7 @@ namespace Beerhall.Controllers {
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(EditViewModel brewerEditViewModel) {
             if (ModelState.IsValid) {
                 try {
@@ -57,6 +58,7 @@ namespace Beerhall.Controllers {
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(EditViewModel brewerEditViewModel) {
             if (ModelState.IsValid) {
                 try {
@@ -84,6 +86,7 @@ namespace Beerhall.Controllers {
         }
 
         [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id) {
             Brewer brewer = null;
             try {
