@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Beerhall.Controllers {
-    [Authorize]
+    [Authorize(Policy = "AdminOnly")]
     public class BrewerController : Controller {
         private readonly IBrewerRepository _brewerRepository;
         private readonly ILocationRepository _locationRepository;
