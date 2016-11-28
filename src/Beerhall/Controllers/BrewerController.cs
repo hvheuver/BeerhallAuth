@@ -4,9 +4,11 @@ using Beerhall.Models.Domain;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using Beerhall.Models.ViewModels.BrewerViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Beerhall.Controllers {
+    [Authorize]
     public class BrewerController : Controller {
         private readonly IBrewerRepository _brewerRepository;
         private readonly ILocationRepository _locationRepository;
@@ -16,6 +18,7 @@ namespace Beerhall.Controllers {
             _locationRepository = locationRepository;
         }
 
+        [AllowAnonymous]
         public IActionResult Index() {
             IEnumerable<Brewer> brewers = _brewerRepository.GetAll().OrderBy(b => b.Name).ToList();
             ViewData["TotalTurnover"] = brewers.Sum(b => b.Turnover);
